@@ -1,0 +1,47 @@
+
+
+<div class="container" >
+    <p>LISTA DE TRABAJADORES</p>
+
+    <button routerLink="/add" type="button" class="btn btn-dark">Agregar </button>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Tipo de documento</th>
+            <th scope="col">Número de documento</th>
+            <th scope="col">Sueldo</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Campos de auditoria</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let equipo of ListarEquipo">
+            <th>{{equipo.id}}</th>
+            <td>{{equipo.nombre}}</td>
+            <td>{{equipo.apellido_paterno}}</td>
+            <td>{{equipo.apellido_materno}}</td>
+            <td>{{equipo.fecha_nacimiento}}</td>
+            <td>{{equipo.tipo_documento}}</td>
+            <td>{{equipo.numero_documento}}</td>
+            <td>{{equipo.sueldo}}</td>
+            <td>{{equipo.estado}}</td>
+            <td>{{equipo.campos_auditoria}}</td>
+            <td>
+                <button (click)="modificar(equipo.id)" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminar(equipo.id)" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>

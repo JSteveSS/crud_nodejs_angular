@@ -1,0 +1,50 @@
+
+<div class="container">
+    <p>AGREGAR EQUIPO</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellido Paterno</label>
+                    <input [(ngModel)]="equipo.apellido_paterno" type="text" class="form-control" name="apellido_paterno">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellido Materno</label>
+                    <input [(ngModel)]="equipo.apellido_materno" type="text" class="form-control" name="apellido_materno">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha de Nacimiento</label>
+                    <input [(ngModel)]="equipo.fecha_nacimiento" type="text" class="form-control" name="fecha_nacimiento">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Documento</label>
+                    <input [(ngModel)]="equipo.tipo_documento" type="text" class="form-control" name="tipo_documento">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Número de Documento</label>
+                    <input [(ngModel)]="equipo.numero_documento" type="text" class="form-control" name="numero_documento">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Sueldo</label>
+                    <input [(ngModel)]="equipo.sueldo" type="text" class="form-control" name="sueldo">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Estado</label>
+                    <input [(ngModel)]="equipo.estado" type="text" class="form-control" name="estado">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Campos de auditoría</label>
+                    <input [(ngModel)]="equipo.campos_auditoria" type="text" class="form-control" name="campos_auditoria">
+                </div>
+                
+                <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+            </form>
+        </div>
+
+    </div>
+    
+</div>
